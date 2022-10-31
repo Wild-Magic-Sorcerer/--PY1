@@ -24,6 +24,4 @@ main_str = """
 """
 print(get_count_char(main_str))
 
-print(len(get_count_char(main_str)))
-
 print(get_proc_char(get_count_char(main_str)))
