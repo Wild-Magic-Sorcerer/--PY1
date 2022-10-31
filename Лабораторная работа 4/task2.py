@@ -11,6 +11,11 @@ def get_count_char(str_):
                 dic[charl] += 1
     return dic
 
+def get_proc_char(dic_):
+    for i in dic_:
+        dic_[i] = str(round(dic_[i]/len(dic_), 5) * 100) + "%"
+    return dic_
+
 
 main_str = """
     Данное предложение будет разбиваться на отдельные слова.
@@ -19,3 +24,6 @@ main_str = """
 """
 print(get_count_char(main_str))
 
+print(len(get_count_char(main_str)))
+
+print(get_proc_char(get_count_char(main_str)))
